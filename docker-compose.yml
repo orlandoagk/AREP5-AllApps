@@ -24,7 +24,15 @@ services:
     depends_on:
       - redis
     ports:
-      - "2000-2003:34000"
+      - "2000-2002:34000"
+    networks:
+      - redAREP
+ loadbalancer:
+    image: orlandogk10/loadbalancerarep5
+    depends_on:
+      - logservice
+    ports:
+      - "80:4567"
     networks:
       - redAREP
 
