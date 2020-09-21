@@ -5,19 +5,16 @@ import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
 import org.json.JSONObject;
 
-import java.net.MalformedURLException;
-import java.net.URI;
-import java.net.URISyntaxException;
+import java.net.*;
 
 public class ApiConnect {
 
-    public static String getMessage(String server) throws URISyntaxException {
+    public static String getMessage(String server) throws URISyntaxException, UnknownHostException {
         HttpResponse<String> response = null;
-
-        URI uri = new URI("http","http://"+server,"/getMessages",null);
+        String ip = InetAddress.getByName(server).getHostAddress();
         try {
 
-            response = Unirest.get(uri.toString())
+            response = Unirest.get("http://"+ip+":34000/getMessages")
                     .asString();
         } catch (UnirestException e) {
             e.printStackTrace();
