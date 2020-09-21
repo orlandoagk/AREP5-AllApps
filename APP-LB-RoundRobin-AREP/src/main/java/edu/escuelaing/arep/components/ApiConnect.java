@@ -10,7 +10,7 @@ public class ApiConnect {
     public static String getMessage(String server){
         HttpResponse<String> response = null;
         try {
-            response = Unirest.get("http://"+server+"/getMessages")
+            response = Unirest.get(server+"/getMessages")
                     .asString();
         } catch (UnirestException e) {
             e.printStackTrace();
@@ -25,7 +25,7 @@ public class ApiConnect {
         JSONObject messageJSON = new JSONObject();
         messageJSON.put("message",message);
         try {
-            response = Unirest.post("http://"+server+"/putMessage").body(messageJSON).asString();
+            response = Unirest.post(server+"/putMessage").body(messageJSON).asString();
         } catch (UnirestException e) {
             e.printStackTrace();
         }
