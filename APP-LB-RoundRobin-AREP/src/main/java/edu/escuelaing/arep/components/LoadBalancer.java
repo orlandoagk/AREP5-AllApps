@@ -12,7 +12,7 @@ public class LoadBalancer {
     private int iUrls;
 
     public LoadBalancer(){
-        if(System.getenv("environment")!=null) {
+        if(System.getenv("Environment")!=null) {
             urls = new String[]{"arep5-allapps_logservice_1", "arep5-allapps_logservice_2", "arep5-allapps_logservice_3"};
         } else {
             urls = new String[]{"54.81.77.178:2000", "54.81.77.178:2001", "54.81.77.178:2002"};
