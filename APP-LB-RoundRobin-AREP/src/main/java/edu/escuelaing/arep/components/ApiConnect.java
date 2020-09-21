@@ -9,12 +9,12 @@ import java.net.*;
 
 public class ApiConnect {
 
-    public static String getMessage(String server) throws URISyntaxException, UnknownHostException {
+    public static String getMessage(String server){
         HttpResponse<String> response = null;
-        String ip = InetAddress.getByName(server).getHostAddress();
+        System.out.println(server+" Server");
         try {
 
-            response = Unirest.get("http://"+ip+":34000/getMessages")
+            response = Unirest.get("http://"+server+"/getMessages")
                     .asString();
         } catch (UnirestException e) {
             e.printStackTrace();
@@ -23,14 +23,13 @@ public class ApiConnect {
         return response.getBody();
     }
 
-    public static String putMessage(String server,String message) throws UnknownHostException {
+    public static String putMessage(String server,String message) {
         HttpResponse<String> response = null;
-
+        System.out.println(server+" Server");
         JSONObject messageJSON = new JSONObject();
         messageJSON.put("message",message);
-        String ip = InetAddress.getByName(server).getHostAddress();
         try {
-            response = Unirest.post("http://"+ip+":34000/putMessage").body(messageJSON).asString();
+            response = Unirest.post("http://"+server+"/putMessage").body(messageJSON).asString();
         } catch (UnirestException e) {
             e.printStackTrace();
         }
