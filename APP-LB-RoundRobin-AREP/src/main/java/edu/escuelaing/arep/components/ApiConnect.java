@@ -23,13 +23,14 @@ public class ApiConnect {
         return response.getBody();
     }
 
-    public static String putMessage(String server,String message){
+    public static String putMessage(String server,String message) throws UnknownHostException {
         HttpResponse<String> response = null;
 
         JSONObject messageJSON = new JSONObject();
         messageJSON.put("message",message);
+        String ip = InetAddress.getByName(server).getHostAddress();
         try {
-            response = Unirest.post("http://"+server+"/putMessage").body(messageJSON).asString();
+            response = Unirest.post("http://"+ip+":34000/putMessage").body(messageJSON).asString();
         } catch (UnirestException e) {
             e.printStackTrace();
         }
