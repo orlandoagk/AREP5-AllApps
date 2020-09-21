@@ -5,12 +5,19 @@ import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
 import org.json.JSONObject;
 
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URISyntaxException;
+
 public class ApiConnect {
 
-    public static String getMessage(String server){
+    public static String getMessage(String server) throws URISyntaxException {
         HttpResponse<String> response = null;
+
+        URI uri = new URI("http","http://"+server,"/getMessages",null);
         try {
-            response = Unirest.get(server+"/getMessages")
+
+            response = Unirest.get(uri.toString())
                     .asString();
         } catch (UnirestException e) {
             e.printStackTrace();
@@ -25,7 +32,7 @@ public class ApiConnect {
         JSONObject messageJSON = new JSONObject();
         messageJSON.put("message",message);
         try {
-            response = Unirest.post(server+"/putMessage").body(messageJSON).asString();
+            response = Unirest.post("http://"+server+"/putMessage").body(messageJSON).asString();
         } catch (UnirestException e) {
             e.printStackTrace();
         }
