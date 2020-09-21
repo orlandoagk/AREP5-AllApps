@@ -53,7 +53,7 @@ To read the documentation of the project you need to enter to the enter the APP 
 - [Docker Compose](https://docs.docker.com/compose/)
 - [Docker Hub](https://hub.docker.com/)
 
-## Autor
+## Author
 - [orlandoagk - Github](https://www.github.com/orlandoagk)
 - [Orlando Gelves - Linkedin](https://www.linkedin.com/in/orlando-antonio-gelves-kerguelen-11445b1a5/)
 
@@ -64,5 +64,5 @@ To read the documentation of the project you need to enter to the enter the APP 
 - [Statement](http://campusvirtual.escuelaing.edu.co/moodle/mod/assign/view.php?id=37113)
 - [Jedis (connnection Java to Redis)](https://kb.objectrocket.com/redis/how-to-connect-redis-on-java-using-jedis-573)
 
-## Licencia
+## Licence
 This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](/LICENSE) file for more details.
