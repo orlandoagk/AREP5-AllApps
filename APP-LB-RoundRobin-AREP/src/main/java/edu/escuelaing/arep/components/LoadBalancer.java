@@ -33,7 +33,7 @@ public class LoadBalancer {
 
 
 
-    public List<JSONObject> putMessage(String message){
+    public List<JSONObject> putMessage(String message) throws UnknownHostException {
 
         List<JSONObject> array = returnList(new JSONArray(ApiConnect.putMessage(urls[iUrls],message)));
         if(iUrls==urls.length-1){
