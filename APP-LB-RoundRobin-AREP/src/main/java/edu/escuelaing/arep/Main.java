@@ -5,6 +5,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.net.URLDecoder;
+import java.net.UnknownHostException;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +13,7 @@ import java.util.List;
 import static spark.Spark.*;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws UnknownHostException {
         port(getPort());
         LoadBalancer loadBalancer = new LoadBalancer();
         get("/",(req,res)->{
@@ -28,8 +29,11 @@ public class Main {
         post("/sendMessage",(req,res)->{
             List<JSONObject> array = null;
             try {
-
-                array = loadBalancer.putMessage(URLDecoder.decode(req.body().split("=")[1], StandardCharsets.UTF_8.name()));
+                if(req.body().equals("message=")){
+                    array = loadBalancer.putMessage(" ");
+                } else {
+                    array = loadBalancer.putMessage(URLDecoder.decode(req.body().split("=")[1], StandardCharsets.UTF_8.name()));
+                }
 
             } catch (Exception e){
                 System.out.println(e.getMessage());

@@ -5,11 +5,15 @@ import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
 import org.json.JSONObject;
 
+import java.net.*;
+
 public class ApiConnect {
 
     public static String getMessage(String server){
         HttpResponse<String> response = null;
+        System.out.println(server+" Server");
         try {
+
             response = Unirest.get("http://"+server+"/getMessages")
                     .asString();
         } catch (UnirestException e) {
@@ -19,9 +23,9 @@ public class ApiConnect {
         return response.getBody();
     }
 
-    public static String putMessage(String server,String message){
+    public static String putMessage(String server,String message) {
         HttpResponse<String> response = null;
-
+        System.out.println(server+" Server");
         JSONObject messageJSON = new JSONObject();
         messageJSON.put("message",message);
         try {
