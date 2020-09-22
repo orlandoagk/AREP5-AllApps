@@ -1,3 +1,10 @@
 
-X
-java:S2094"BRemove this empty class, write its code or make it an "interface".(àªÅö
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(©şêÜúÿÿÿÿ8½ê¸íÊ.
+Z	java:S106'"9Replace this use of System.out or System.err by a logger.(©şêÜúÿÿÿÿ8¬ ¡íÊ.
+9
+java:S1643A"Use a StringBuilder instead.(ó”¶˜8”ñ’íÊ.
+M
+java:S1128
+"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8¶€»ìÊ.
+Q
+java:S1128"/Remove this unused import 'org.json.JSONArray'.(¬¸Ê’üÿÿÿÿ8ã¹¥ìÊ.

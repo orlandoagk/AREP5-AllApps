@@ -1,0 +1,19 @@
+
+„
+java:S4165E"iRemove this useless assignment; "jsonObjects" already holds the assigned value along all execution paths.(˜üâûÿÿÿÿ
+b
+java:S1192"LDefine a constant instead of duplicating this literal "Environment" 3 times.(ˆö¥ß
+b
+java:S1192@"MDefine a constant instead of duplicating this literal "computerDate" 3 times.(Â†Â^
+N	java:S106"9Replace this use of System.out or System.err by a logger.(Ø‚ô·
+S	java:S106"9Replace this use of System.out or System.err by a logger.(©şêÜúÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ÿÕç“şÿÿÿÿ
+N	java:S106-"9Replace this use of System.out or System.err by a logger.(ÒÖÎ
+N	java:S106A"9Replace this use of System.out or System.err by a logger.(ı÷ì
+N	java:S106J"9Replace this use of System.out or System.err by a logger.(·ŠÌŸ
+N	java:S106M"9Replace this use of System.out or System.err by a logger.(©¨Ôõ
+S	java:S106S"9Replace this use of System.out or System.err by a logger.(©şêÜúÿÿÿÿ
+?
+java:S5413e")Verify that "remove()" is used correctly.(·şùë
+?
+java:S5413e")Verify that "remove()" is used correctly.(·şùë

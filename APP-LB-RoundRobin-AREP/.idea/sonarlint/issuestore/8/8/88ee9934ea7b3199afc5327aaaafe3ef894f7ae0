@@ -1,7 +1,10 @@
 
+c
+java:S2259%"FA "NullPointerException" could be thrown; "response" is nullable here.(˜Ğó8Ç‡®ñÊ.
+c
+java:S2259"FA "NullPointerException" could be thrown; "response" is nullable here.(˜Ğó8Ç‡®ñÊ.
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(å—ö˜ùÿÿÿÿ8¦ş¸òÊ.
 \
-java:S1118":Add a private constructor to hide the implicit public one.(‘ÕÎúÿÿÿÿ8—ê¼ÊÊ.
-c
-java:S2259 "FA "NullPointerException" could be thrown; "response" is nullable here.(˜Ğó8ÿº£ÌÊ.
-c
-java:S2259"FA "NullPointerException" could be thrown; "response" is nullable here.(˜Ğó8»ˆ—ÌÊ.
+java:S1118
+":Add a private constructor to hide the implicit public one.(‘ÕÎúÿÿÿÿ8¬…„íÊ.
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(å—ö˜ùÿÿÿÿ8ê—ºòÊ.
