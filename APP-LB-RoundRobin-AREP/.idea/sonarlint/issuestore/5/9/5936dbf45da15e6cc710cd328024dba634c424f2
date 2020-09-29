@@ -1,0 +1,7 @@
+
+“
+java:S1130)"vRemove the declaration of thrown exception 'java.net.UnknownHostException', as it cannot be thrown from method's body.(ðý©¿8§™¾ŸË.
+–
+java:S11304"tRemove the declaration of thrown exception 'java.net.URISyntaxException', as it cannot be thrown from method's body.(­±µÜûÿÿÿÿ8§™¾ŸË.
+˜
+java:S11304"vRemove the declaration of thrown exception 'java.net.UnknownHostException', as it cannot be thrown from method's body.(­±µÜûÿÿÿÿ8§™¾ŸË.
